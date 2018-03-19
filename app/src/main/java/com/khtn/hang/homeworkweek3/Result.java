@@ -1,5 +1,6 @@
 package com.khtn.hang.homeworkweek3;
 
+import java.io.Serializable;
 import java.util.Arrays;
 import java.util.List;
 
@@ -7,7 +8,7 @@ import java.util.List;
  * Created by nhyml on 3/17/2018.
  */
 
-public class Result {
+public class Result implements Serializable {
     private int vote_count;
     private long id;
     private boolean video;

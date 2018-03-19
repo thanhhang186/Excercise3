@@ -1,5 +1,6 @@
 package com.khtn.hang.homeworkweek3;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
@@ -35,6 +36,8 @@ public class MainActivity extends AppCompatActivity implements RecyclerViewAdapt
     }
     @Override
     public void onItemClick(Result result){
-
+        Intent intent = new Intent(this, DetailActivity.class);
+        intent.putExtra("detail", result);
+        startActivity(intent);
     }
 }

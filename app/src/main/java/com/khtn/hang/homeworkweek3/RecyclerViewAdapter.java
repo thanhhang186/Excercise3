@@ -56,7 +56,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
         holder.tvTitle.setText(result.getTitle());
         holder.tvOverView.setText(result.getOverview());
         holder.itemView.setOnClickListener(v->listener.onItemClick(result));
-
+        holder.imgPlay.setVisibility(result.isVideo()?View.VISIBLE:View.GONE);
     }
 
     @Override
@@ -68,12 +68,14 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
         private TextView tvTitle;
         private TextView tvOverView;
         private ImageView imgMovie;
+        private ImageView imgPlay;
 
         public ViewHolder(View itemView) {
             super(itemView);
             tvTitle = (TextView) itemView.findViewById(R.id.tvTitle);
             tvOverView = (TextView) itemView.findViewById(R.id.tvOverView);
             imgMovie = (ImageView) itemView.findViewById(R.id.imgMovie);
+            imgPlay = (ImageView) itemView.findViewById(R.id.imgPlay);
 
         }
     }
